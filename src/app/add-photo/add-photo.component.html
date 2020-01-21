@@ -1,0 +1,17 @@
+<div class="add-photo-container">
+    <mat-card class="add-photo-card">
+     <mat-card-header>
+         <mat-card-title>Add Info</mat-card-title>
+     </mat-card-header>
+     <mat-form-field>
+         <input matInput [(ngModel)]="imageTitle" placeholder="Title">
+       </mat-form-field>
+     
+       <mat-form-field>
+         <input matInput [(ngModel)]="imageDescription" placeholder="Description">
+       </mat-form-field>
+         <input #imageInput type="file" (change)="imageInputChange(imageInput)" accept="image/*">
+         <button mat-raised-button color="primary" (click)="addImage()">Add Image</button>
+ 
+       </mat-card>
+ </div>
